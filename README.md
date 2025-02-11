@@ -26,3 +26,13 @@ else
    echo -e "The directory doesn't seem to have an \nvirtual environment in .venv/ 😔"
 fi
 ```
+
+## kill each all processes
+Sometimes there could be processes and subprocesses the killall command  
+cannot touch. Here is a snippet that checks for all processes and takes out
+their pids and try to kill them. Defined as a function in .bashrc. 
+```bash
+# $ kill_trouble name_of_process
+function kill_troubled { kill $(ps aux | grep $1 | grep -v grep | awk '{print $2}'); }
+export -f kill_troubled
+```
