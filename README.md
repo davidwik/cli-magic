@@ -20,11 +20,12 @@ if [ -f $ACTIVATE_FILE ]; then
       source '.env'
    fi
    echo "Entering sub-space shell 🚀"
-   $SHELL --init-file <(cat /etc/profile ~/.bashrc "${ACTIVATE_FILE}")
+   $SHELL --init-file <(cat /etc/profile ~/.profile "${ACTIVATE_FILE}")
    echo "Leaving 🐍 sub-shell, good bye! Love you ❤️❤️  !"
 else
    echo -e "The directory doesn't seem to have an \nvirtual environment in .venv/ 😔"
 fi
+
 ```
 
 ## kill each all processes
