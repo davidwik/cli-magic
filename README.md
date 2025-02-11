@@ -3,9 +3,8 @@ Bash scripts, cli how-to's and other neat things in the terminal
 
 ## vshell  
 While trying out [*uv*](https://github.com/astral-sh/uv) there were some things missing. For instance 
-getting into a virtual environment in sub shell. So vshell loads 
-the environment and checks whether there are any .env files in the 
-project root. 
+getting into a virtual environment in sub shell. So I went ahead and made a quick bash script. 
+Vshell loads the environment and checks whether there are any .env files in the project root. 
 
 _Note_: This only works if the virtual environment is localed in the .venv in your project. 
 ```bash
