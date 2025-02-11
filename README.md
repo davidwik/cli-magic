@@ -1,5 +1,5 @@
 # cli-magic
-Bash scripts, cli how-to's and other neat things in the terminal
+Bash scripts, CLI how-to's and other neat things in the terminal. 
 
 ## vshell  
 While trying out [*uv*](https://github.com/astral-sh/uv) there were some things missing. For instance 
