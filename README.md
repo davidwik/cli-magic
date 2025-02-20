@@ -12,12 +12,12 @@ _Note_: This only works if the virtual environment is localed in the .venv in yo
 set -o allexport 
 ACTIVATE_FILE='.venv/bin/activate'
 if [ -f $ACTIVATE_FILE ]; then
+    echo -e "👉 ENTERING A VIRTUAL ENVIRONMENT! 👈 "
     if [ -f '.env' ]; then
-      echo -e "👉 ENTERING A VIRTUAL ENVIRONMENT! 👈 "
       echo "💡 - found .env file! Examining 🕵️ ...."
       source '.env'
    fi
-   echo "Entering sub-space shell 🚀"
+   echo "Launching sub-space shell 🚀"
    $SHELL --init-file <(cat /etc/profile ~/.profile "${ACTIVATE_FILE}")
    echo "Leaving 🐍 sub-shell, good bye! Have a good day! Love you ❤️❤️  !"
 else
