@@ -19,7 +19,7 @@ if [ -f $ACTIVATE_FILE ]; then
    fi
    echo "Entering sub-space shell 🚀"
    $SHELL --init-file <(cat /etc/profile ~/.profile "${ACTIVATE_FILE}")
-   echo "Leaving 🐍 sub-shell, good bye! Love you ❤️❤️  !"
+   echo "Leaving 🐍 sub-shell, good bye! Have a good day! Love you ❤️❤️  !"
 else
    echo -e "The directory doesn't seem to have an \nvirtual environment in .venv/ 😔"
 fi
