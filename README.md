@@ -1,6 +1,17 @@
 # cli-magic snippets and scripts
 Bash scripts, CLI how-to's, tools and other neat things in the terminal. 
 
+## Copy files from remote server while logged in with SSH
+Sometimes you want to get a few files from a server while logged in via  
+an ssh terminal. 
+```bash
+# Connect to the server and create a tunnel to yourself on port 12345
+ssh -R 12345:localhost:22 user@remoteserver
+
+# Copy the files while specifying the incoming port
+scp -P 12345 [SRC_FILES]  user@localhost:~/[DEST]
+```
+
 ## vshell  
 While trying out [*uv*](https://github.com/astral-sh/uv) there were some things missing. For instance 
 getting into a virtual environment in sub shell. So I went ahead and made a quick bash script. 
@@ -11,7 +22,7 @@ _Note_: This only works if the virtual environment is localed in the .venv in yo
 #!/bin/bash
 set -o allexport 
 ACTIVATE_FILE='.venv/bin/activate'
-if [ -f $ACTIVATE_FILE ]; then
+if [ -f $ACTIVATE_FILE ]; thend365signupdates/services
     echo -e "👉 ENTERING A VIRTUAL ENVIRONMENT! 👈 "
     if [ -f '.env' ]; then
       echo "💡 - found .env file! Examining 🕵️ ...."
